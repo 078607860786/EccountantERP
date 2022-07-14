@@ -18,7 +18,7 @@ import main.Start;
 
 
 
-public class Sales extends Start{
+public class Sales{
 	
 	public WebDriver driver;
 	String status_draft="DRAFT";
@@ -66,7 +66,7 @@ public class Sales extends Start{
 	
 	 String des1="Sohail";
 	
-	public void step() throws Exception {
+	public void step(){
 //		System.setProperty("webdriver.chrome.driver","C:\\chromedriver.exe");
 //		WebDriver driver=new ChromeDriver();
     
@@ -83,7 +83,7 @@ public class Sales extends Start{
         WebElement from= driver.findElement(By.id("customer_name"));
         from.clear();
         from.sendKeys(customer_name);
-        Thread.sleep(3000);
+      
         Actions builder=new Actions(driver);
         builder.moveToElement( from.findElement(By.xpath("/html/body/div/div[4]/div[2]/div[1]/div[2]/div/div[1]/div/form/div[2]/div/div/div[2]/div[2]/table/thead/tr/th/div/div/div[2]/a/div/div[1]"))).click().build().perform();
         //----------
@@ -92,14 +92,14 @@ public class Sales extends Start{
         WebElement product=driver.findElement(By.id("name1"));
         product.clear();
         product.sendKeys(product1);
-        Thread.sleep(3000);
+  
         Actions builder2=new Actions(driver);
         builder2.moveToElement(product.findElement(By.xpath("/html/body/div/div[4]/div[2]/div[1]/div[2]/div/div[1]/div/form/div[2]/div/div/div[4]/div/div/div[2]/div/div[1]/div[1]/div/a/div/div[1]"))).click().build().perform();  
-        Thread.sleep(3000);
+       
         //Write Description
         driver.findElement(By.id("product_desc1")).clear();
         driver.findElement(By.id("product_desc1")).sendKeys(product_des);
-        Thread.sleep(3000);
+      
         //Write Product Qty
         driver.findElement(By.name("product[1][qty]")).clear();
         driver.findElement(By.name("product[1][qty]")).sendKeys(product_qty);
@@ -109,13 +109,13 @@ public class Sales extends Start{
         WebElement product3=driver.findElement(By.id("name2"));
         product3.clear();
         product3.sendKeys(product2);
-        Thread.sleep(3000);
+   
         Actions builder3=new Actions(driver);
         builder3.moveToElement(product.findElement(By.xpath("/html/body/div/div[4]/div[2]/div/div[2]/div/div[1]/div/form/div[2]/div/div/div[4]/div/div/div[2]/div[2]/div[1]/div[1]/div/a/div/div[1]"))).click().build().perform();  
         driver.findElement(By.id("product_desc2")).clear();
-        Thread.sleep(3000);
+       
         driver.findElement(By.id("product_desc2")).sendKeys(product_des2);
-        Thread.sleep(3000);
+        
         //Write Product Qty
         driver.findElement(By.name("product[2][qty]")).clear();
         driver.findElement(By.name("product[2][qty]")).sendKeys(product_qty2);
