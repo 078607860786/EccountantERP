@@ -19,13 +19,13 @@ import salesModule.Sales;
 public class Start {
     
 
-	public static void main(String[] args){
+	public static void main(String[] args) throws Exception{
 		login ss=new login();
 		ss.login_credential();
 		//Create Object Sales Class
-		Sales sale=new Sales();
-		sale.step();
-
+//		Sales sale=new Sales();
+//		sale.step();
+		
 	
 }
 }
