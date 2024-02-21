@@ -7,13 +7,25 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
 
 import salesModule.Sales;
 
 public class purchase_module extends Sales {
-	
-	
+
+
+
+//	WebDriver driver=null;
+
+//	
+//	public purchase_module(WebDriver driver) {
+//		super.driver=driver;
+//		// TODO Auto-generated constructor stub
+//	}
+//
+
+
 	String unit="abc";
 	String description="Material Requirement Form";
 	String status="DRAFT";
@@ -22,12 +34,14 @@ public class purchase_module extends Sales {
 	String alert_draft=" Material Requirement Form created successfully.";
     String purpose="Sales";
     String sfds="Sohai";
-	
     
-	public void step(WebDriver driver) throws Exception {
+	
+
+	public void step(WebDriver driver) {
 	    
-   driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
+//   driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
 //Click Purchase Module
+
 driver.findElement(By.partialLinkText("Purchase")).click();
 //Click Material Requirement Form
 driver.findElement(By.partialLinkText("Material Requirement Form")).click();
@@ -35,7 +49,7 @@ driver.findElement(By.partialLinkText("Material Requirement Form")).click();
 driver.findElement(By.partialLinkText("Add Material Requirement Form")).click();
 //Go to Setting see Hide & Show
 driver.findElement(By.className("btn-sm")).click();
-Thread.sleep(5000);
+//Thread.sleep(5000);
 //if(!driver.findElement(By.xpath("//input[@type='checkbox' and @name='report[mrf_list][descrp]']")).isSelected()){
 //	Thread.sleep(3000);
 //	driver.findElement(By.xpath("//input[@type='checkbox' and @name='report[mrf_list][descrp]']")).click();
@@ -143,10 +157,10 @@ else if(!(pro_1== true && pro_des1==true && qty1==true && status_draft==true && 
  WebElement product=driver.findElement(By.id("name1"));
  product.clear();
  product.sendKeys(product1);
- Thread.sleep(3000);
+// Thread.sleep(3000);
  Actions builder5=new Actions(driver);
  builder5.moveToElement(product.findElement(By.xpath("/html/body/div[1]/div[4]/div[2]/div/section[2]/div/div/div/div/form/div[2]/div/div/div[4]/div/div/div[2]/div/div[1]/div/div[2]/a/div/div[1]"))).click().build().perform();  
- Thread.sleep(3000);
+// Thread.sleep(3000);
 //Select Unit1
 driver.findElement(By.cssSelector("button[data-id='unit1']")).sendKeys(this.unit,Keys.ENTER);
 //Write Discription1
@@ -204,13 +218,13 @@ driver.findElement(By.id("newline")).click();
 WebElement product22=driver.findElement(By.id("name3"));
 product22.clear();
 product22.sendKeys(product2);
-Thread.sleep(3000);
+//Thread.sleep(3000);
 Actions builder6=new Actions(driver);
 builder6.moveToElement(product22.findElement(By.xpath("/html/body/div[1]/div[4]/div[2]/div/section[2]/div/div/div/div/form/div[2]/div/div/div[4]/div/div/div[2]/div[2]/div[1]/div/div[2]/a/div/div[1]"))).click().build().perform();  
-Thread.sleep(3000);
+//Thread.sleep(3000);
 
 
-Thread.sleep(3000);
+//Thread.sleep(3000);
 //Select Unit1
 driver.findElement(By.cssSelector("button[data-id='unit3']")).sendKeys(this.unit,Keys.ENTER);
 //Write Discription1

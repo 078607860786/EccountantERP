@@ -15,8 +15,8 @@
 			<attribute name="maven.scope" value="compile"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="F:/Selenium 2/selenium-java-4.1.2/selenium-java-4.1.2.jar"/>
 	<classpathentry kind="lib" path="F:/Selenium 2/selenium-server-4.1.4.jar"/>
 	<classpathentry kind="con" path="org.testng.TESTNG_CONTAINER"/>
+	<classpathentry kind="lib" path="F:/Selenium 2/selenium-java-4.1.2/selenium-java-4.1.2.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
